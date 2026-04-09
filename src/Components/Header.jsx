@@ -1,49 +1,18 @@
 import React from "react";
 import { Navbar } from "flowbite-react";
-import { FaHome, FaInfoCircle, FaServicestack, FaDollarSign, FaEnvelope } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
 
 export const Header = () => {
   return (
-    <Navbar fluid rounded className="bg-white dark:bg-gray-800 shadow-lg">
-      <Navbar.Brand href="#">
-        <span className="self-center whitespace-nowrap text-2xl font-bold text-blue-600 dark:text-blue-400">
+    <Navbar fluid rounded className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 dark:from-blue-800 dark:via-purple-800 dark:to-indigo-800 shadow-xl border-b border-gray-200 dark:border-gray-700">
+      <Navbar.Brand href="#" className="flex items-center space-x-3">
+        <div className="p-2 bg-white dark:bg-gray-800 rounded-full shadow-md">
+          <FaCode className="text-blue-600 dark:text-blue-400 text-xl" />
+        </div>
+        <span className="self-center whitespace-nowrap text-2xl font-bold text-white dark:text-white drop-shadow-lg">
           Portofolio Ghatan
         </span>
       </Navbar.Brand>
-      <Navbar.Toggle />
-
-      <Navbar.Collapse>
-        <Navbar.Link href="#" active className="flex items-center">
-          <FaHome className="mr-2" />
-          <span className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">
-            Home
-          </span>
-        </Navbar.Link>
-        <Navbar.Link href="#about" className="flex items-center">
-          <FaInfoCircle className="mr-2" />
-          <span className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">
-            About
-          </span>
-        </Navbar.Link>
-        <Navbar.Link href="#services" className="flex items-center">
-          <FaServicestack className="mr-2" />
-          <span className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">
-            Services
-          </span>
-        </Navbar.Link>
-        <Navbar.Link href="#pricing" className="flex items-center">
-          <FaDollarSign className="mr-2" />
-          <span className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">
-            Pricing
-          </span>
-        </Navbar.Link>
-        <Navbar.Link href="#contact" className="flex items-center">
-          <FaEnvelope className="mr-2" />
-          <span className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">
-            Contact
-          </span>
-        </Navbar.Link>
-      </Navbar.Collapse>
     </Navbar>
   );
 };
